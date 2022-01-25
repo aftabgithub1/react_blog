@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <div className="logo">Header</div>
+        <div className="logo">React Blog</div>
         <div className="admin-name">{ users.map(user => user.id == userId ? user.name : null) }</div>
       </div>
     </header>
