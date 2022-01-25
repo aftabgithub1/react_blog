@@ -15,7 +15,7 @@ const DataProvider = ({ children }) => {
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
+  const { data, fetchError, isLoading } = useAxiosFetch('https://aftabgithub1.github.io/react_blog/posts');
 
   
   
