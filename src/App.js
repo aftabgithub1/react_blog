@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { DataProvider } from './context/DataContext';
 
-function App() {
+// layouts
+import Header from './Header';
+import Nav from './Nav';
+import Footer from './Footer';
+
+// pages
+import Home from './pages/Home';
+import NewPost from './pages/NewPost';
+import PostPage from './pages/PostPage';
+import About from './pages/About';
+import EditPost from './pages/EditPost';
+import Test from './pages/Test';
+import MissingPage from './pages/MissingPage';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='app'>
+        <Header />
+          <DataProvider>
+            <Nav />
+            <Routes>
+              <Route index element={ <Home /> } />
+              <Route path="/post" element={ <NewPost /> } />
+              <Route path="/post/:id/:postTitle" element={ <PostPage /> } />
+              <Route path="/edit-post/:id" element={ <EditPost /> } />
+              <Route path="/about" element={<About />} />
+              <Route path="/test" element={<Test />} />
+              <Route path="*" element={<MissingPage />} />
+            </Routes>
+          </DataProvider>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+} 
 
 export default App;

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aftab",
+      "email": "aftab@test.com"
+    },
+    {
+      "id": 2,
+      "name": "Kamrul",
+      "email": "kamrul@test.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "My Bithday",
+      "date": "January 12, 2022",
+      "body": "I just started creating this project on this date, and I found its my birthday"
+    },
+    {
+      "id": 2,
+      "title": "Post Two",
+      "date": "January 13, 2022",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
+    },
+    {
+      "id": 3,
+      "title": "Post Three",
+      "date": "January 14, 2022",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
+    },
+    {
+      "id": 4,
+      "title": "Post Four",
+      "date": "January 15, 2022",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
+    },
+    {
+      "id": 5,
+      "title": "Post Five",
+      "date": "January 16, 2022",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
+    },
+    {
+      "id": 6,
+      "title": "Data Provider",
+      "date": "2022-01-25 03:13:45",
+      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+    },
+    {
+      "id": 9,
+      "title": "Another Post from context",
+      "date": "2022-01-25 00:23:40",
+      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+    },
+    {
+      "id": 16,
+      "title": "Data Provider 5 Ultimate final",
+      "date": "2022-01-25 14:08:31",
+      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+    }
+  ]
+}

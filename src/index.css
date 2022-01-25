@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +16,297 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea {
+  border: 1px solid steelblue;
+  border-radius: 0.3em;
+  padding: 0.6em 1em;
+  margin-bottom: 10px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid aqua;
+}
+
+button {
+  padding: 0.8em 1em;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+}
+
+button:hover {
+  filter: brightness(0.8)
+}
+
+button:active {
+  filter: brightness(1)
+}
+button.btn-submit {
+  background-color: lightgreen;
+  color: initial;
+}
+button.btn-edit {
+  background-color: steelblue;
+  color: white;
+}
+button.btn-delete {
+  background-color: tomato;
+  color: initial;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+header, footer {
+  background-color: aqua;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  flex-grow: 1;
+  font-size: 3rem;
+  font-weight: bold;
+}
+header .admin-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: blueviolet;
+}
+footer {
+  font-size: initial;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* -------------- utility classes ---------------- */
+
+@media screen and (min-width: 640px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+  .col-md-8 {
+    grid-column: span 8;
+  }
+  .col-md-4 {
+    grid-column: span 4;
+  }
+}
+
+/* -------------- navbar nav (top-nav) ---------------- */
+.top-nav {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+.top-nav .container {
+  display: flex;
+  gap: 20px;
+}
+.top-nav-items {
+  margin-left: auto;
+}
+.top-nav-items, .top-nav-item {
+  height: inherit;
+}
+
+.top-nav-item {
+  display: inline-block;
+}
+.top-nav-item-link {
+  width: 100%;
+  color: #eee;
+  text-decoration: none;
+  padding: 0 10px;
+  display: inline-block;
+  line-height: 45px;
+}
+.top-nav-item-link:hover {
+  background-color: white;
+  color: #333;
+}
+.top-nav-item-link:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* -------------- missing page ---------------- */
+.dropdown {
+  position: relative;
+  background-color: #555;
+}
+.dropdown-option {
+  width: 200px;
+  background-color: #555;
+  color: #eee;
+  box-shadow: 2px 2px 5px #888, -2px 2px 5px #888;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  z-index: 10;
+  bottom: -1;
+  right: 0;
+  display: none;
+}
+.dropdown-item {
+  display: inline-block;
+  overflow: hidden;
+}
+.dropdown-item-link {
+  width: 100%;
+  color: #eee;
+  text-decoration: none;
+  padding: 0 10px;
+  display: inline-block;
+  line-height: 45px;
+}
+.dropdown-item-link:hover {
+  background-color: #ddd;
+  color: #333;
+}
+.dropdown:hover .dropdown-option {
+  display: block;
+}
+
+/* -------------- missing page ---------------- */
+.missing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* -------------- search box ---------------- */
+.top-nav .search-form {
+  flex-grow: 1;
+}
+
+.top-nav label {
+  position: absolute;
+  left: -99999px;
+} 
+.top-nav #searchBox {
+  width: 100%;
+  margin: 8px 0;
+  padding: 5px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* -------------- post ---------------- */
+.post-title, .post-date, .post-body {
+  margin: 0.5em 0;
+}
+
+.post-date {
+  font-size: 0.8rem;
+}
+
+.post-title {
+  text-align: left;
+}
+
+/* -------------- sidebar ---------------- */
+.sidebar {
+  margin: 20px 0 0 20px;
+}
+
+.sidebar-list-item {
+  padding: 10px;
+}
+
+.sidebar-list-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* -------------- post card ---------------- */
+.post-card-link {
+  text-decoration: none;
+}
+
+.post-card {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 20px;
+  color: initial;
+  box-shadow: 1px 1px 4px #ccc;
+}
+
+.post-card:hover {
+  background-color: papayawhip;
+}
+
+.post-card:last-child {
+  margin-bottom: 10px;
+}
+
+.post-card .title a {
+  text-decoration: none;
+}
+
+.post-card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.post-card .date {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.loading, .post-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.post-empty {
+  font-weight: 600;
+  color: red;
+}
+
+/* -------------- new post form ---------------- */
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------- media query ---------------- */
+@media screen and (max-width: 640px) {
+  .container {
+    margin: 0 10px;
+  }
+}
+
