@@ -32,15 +32,9 @@
     },
     {
       "id": 4,
-      "title": "Post Four",
-      "date": "January 15, 2022",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
-    },
-    {
-      "id": 5,
-      "title": "Post Five",
-      "date": "January 16, 2022",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
+      "title": "Post Four (edited)",
+      "date": "2022-01-30 14:17:38",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie. (Edited)"
     },
     {
       "id": 6,

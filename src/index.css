@@ -17,10 +17,6 @@ code {
     monospace;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 0.5em;
-}
 
 ul {
   list-style: none;
@@ -158,11 +154,10 @@ footer {
 /* -------------- missing page ---------------- */
 .dropdown {
   position: relative;
-  background-color: #555;
 }
 .dropdown-option {
-  width: 200px;
-  background-color: #555;
+  min-width: 200px;
+  background-color: rgba(0,0,10,0.8);
   color: #eee;
   box-shadow: 2px 2px 5px #888, -2px 2px 5px #888;
   border-radius: 0 0 5px 5px;
@@ -173,6 +168,7 @@ footer {
   display: none;
 }
 .dropdown-item {
+  width: 100%;
   display: inline-block;
   overflow: hidden;
 }
@@ -183,6 +179,7 @@ footer {
   padding: 0 10px;
   display: inline-block;
   line-height: 45px;
+  white-space: nowrap;
 }
 .dropdown-item-link:hover {
   background-color: #ddd;

@@ -20,9 +20,10 @@ const PostPage = () => {
 
     if(result) {     
       try {
-        await api.delete(`/posts/${id}`);
+        // await api.delete(`/posts/${id}`);
         let listPosts = posts.filter(post => post.id != id);
         setPosts(listPosts);
+        localStorage.setItem('postListLS', JSON.stringify(listPosts));
         navigate('/');
       } catch(err) {
         console.log(err.message)

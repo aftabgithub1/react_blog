@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 
-const useLocalStorage = (key, initial) => {
-  const [items, setItems] = useState(initial);
+const useLocalStorage = (keyName, initialData) => {
+  const [items, setItems] = useState(initialData);
 
   
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(items));
+    localStorage.setItem(keyName, JSON.stringify(items));
   }, [items]);
 
-  const saved = localStorage.getItem(key);
-  if(saved != null) {
+  let savedItems = JSON.parse(localStorage.getItem(keyName));
+  if(savedItems != null) {
     const setNewItems = () => {
-      let savedItems = JSON.parse(saved);
       savedItems.map(savedItem => {
-        let newItems =  [...savedItem, "Mango"];
-        localStorage.setItem(key, JSON.stringify(newItems));
-        return setItems(newItems);
+        // let newItems =  [...savedItem, "Mango"];
+        localStorage.setItem(keyName, JSON.stringify(savedItem));
+        return setItems(savedItem);
       });
     }
     setNewItems();

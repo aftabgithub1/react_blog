@@ -23,9 +23,9 @@ const Nav = () => {
           <li className='top-nav-item'>
             <Link className='top-nav-item-link' to="/">Home</Link>
           </li>
-          <li className='top-nav-item'>
+          {/* <li className='top-nav-item'>
             <Link className='top-nav-item-link' to="/post">Post</Link>
-          </li>
+          </li> */}
           <li className='top-nav-item'>
             <Link className='top-nav-item-link' to="/about">About</Link>
           </li>
@@ -34,7 +34,7 @@ const Nav = () => {
             <ul className="dropdown-option">
               <li className='dropdown-item'>
                 <Link className='dropdown-item-link' to="/test">Test Page</Link>
-                <Link className='dropdown-item-link' to="/">Dropdown Items 2</Link>
+                <Link className='dropdown-item-link' to="/no-page">No link here</Link>
               </li>
             </ul>
           </li>

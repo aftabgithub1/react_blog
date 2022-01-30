@@ -23,11 +23,15 @@ const EditPost = () => {
   
   // -------------------- hsndle edit ---------------------
   const handleEdit = async (id) => {
-    let date = postDateTime();
-    let newEditPostItem = { id, title: editPostTitle, date, body: editPostBody };
+    // let date = postDateTime();
+    // let newEditPostItem = { id, title: editPostTitle, date, body: editPostBody };
     try {
-      let response = await api.put(`/posts/${id}`, newEditPostItem);
-      let listPosts = posts.map(post => post.id == id ? response.data : post);
+      // let response = await api.put(`/posts/${id}`, newEditPostItem);
+      // let listPosts = posts.map(post => post.id == id ? response.data : post);
+      let listPosts = posts.map(post => post.id == id
+        ? {...post, title: editPostTitle, body: editPostBody}
+        : post);
+      localStorage.setItem('postListLS', JSON.stringify(listPosts));
       setPosts(listPosts);
       setEditPostTitle('');
       setEditPostBody('');
@@ -51,7 +55,7 @@ const EditPost = () => {
           id="newPostTitle"
           type="text"
           placeholder="Type a post title"
-          value={editPostTitle}
+          value={editPostTitle.toUpperCase()}
           onChange={e => setEditPostTitle(e.target.value)}
           required
         />

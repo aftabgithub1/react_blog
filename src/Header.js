@@ -1,7 +1,8 @@
 import api from './api/database';
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const Header = () => {
+  /*
   const [users, setUsers] = useState([]);
   const userId = 1;
 
@@ -17,13 +18,13 @@ const Header = () => {
 
     fetchUsers();
   }, []);
-
+*/
 
   return (
     <header>
       <div className="container">
         <div className="logo">React Blog</div>
-        <div className="admin-name">{ users.map(user => user.id == userId ? user.name : null) }</div>
+        {/* <div className="admin-name">{ users.map(user => user.id == userId ? user.name : null) }</div> */}
       </div>
     </header>
   )

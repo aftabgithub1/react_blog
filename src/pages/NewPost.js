@@ -19,8 +19,9 @@ const NewPost = () => {
     let newPostItem = { id, title: postTitle, date, body: postBody };
 
     try {
-      let response = await api.post('/posts', newPostItem);
-      let listPosts = [...posts, response.data];
+      // let response = await api.post('/posts', newPostItem);
+      const localStoragePost = JSON.parse(localStorage.getItem('postListLS'));
+      let listPosts = [...localStoragePost, newPostItem];
       setPosts(listPosts);
       setPostTitle('');
       setPostBody('');
@@ -45,7 +46,7 @@ const NewPost = () => {
             id="newPostTitle"
             type="text"
             placeholder="Type a post title"
-            value={postTitle}
+            value={postTitle.toUpperCase()}
             onChange={(e) => setPostTitle(e.target.value)}
             required
           />
