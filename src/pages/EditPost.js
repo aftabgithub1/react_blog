@@ -55,7 +55,7 @@ const EditPost = () => {
           id="newPostTitle"
           type="text"
           placeholder="Type a post title"
-          value={editPostTitle.toUpperCase()}
+          value={editPostTitle}
           onChange={e => setEditPostTitle(e.target.value)}
           required
         />

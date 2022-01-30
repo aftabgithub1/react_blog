@@ -25,7 +25,7 @@ const NewPost = () => {
       setPosts(listPosts);
       setPostTitle('');
       setPostBody('');
-      nevigate('/');
+      nevigate('/react_blog');
     } catch(err) {
       console.log(err.message)
     }
@@ -46,7 +46,7 @@ const NewPost = () => {
             id="newPostTitle"
             type="text"
             placeholder="Type a post title"
-            value={postTitle.toUpperCase()}
+            value={postTitle}
             onChange={(e) => setPostTitle(e.target.value)}
             required
           />
