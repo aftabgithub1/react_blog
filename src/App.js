@@ -25,12 +25,12 @@ const App = () => {
             <Nav />
             <Routes>
               {/* <Route index element={ <Home /> } /> */}
-              <Route path="/" exact element={ <Home /> } />
-              <Route path="/post" element={ <NewPost /> } />
-              <Route path="/post/:id/:postTitle" element={ <PostPage /> } />
-              <Route path="/edit-post/:id" element={ <EditPost /> } />
-              <Route path="/about" element={<About />} />
-              <Route path="/test" element={<Test />} />
+              <Route path="/react_blog" exact element={ <Home /> } />
+              <Route path="/react_blog/post" element={ <NewPost /> } />
+              <Route path="/react_blog/post/:id/:postTitle" element={ <PostPage /> } />
+              <Route path="/react_blog/edit-post/:id" element={ <EditPost /> } />
+              <Route path="/react_blog/about" element={<About />} />
+              <Route path="/react_blog/test" element={<Test />} />
               <Route path="*" element={<MissingPage />} />
             </Routes>
           </DataProvider>
