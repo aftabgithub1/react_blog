@@ -24,7 +24,7 @@ const PostPage = () => {
         let listPosts = posts.filter(post => post.id != id);
         setPosts(listPosts);
         localStorage.setItem('postListLS', JSON.stringify(listPosts));
-        navigate('./');
+        navigate('/react_blog/');
       } catch(err) {
         console.log(err.message)
       }
