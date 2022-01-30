@@ -21,20 +21,20 @@ const Nav = () => {
         
         <ul className='top-nav-items'>
           <li className='top-nav-item'>
-            <Link className='top-nav-item-link' to="./">Home</Link>
+            <Link className='top-nav-item-link' to="./react_blog">Home</Link>
           </li>
           {/* <li className='top-nav-item'>
             <Link className='top-nav-item-link' to="/post">Post</Link>
           </li> */}
           <li className='top-nav-item'>
-            <Link className='top-nav-item-link' to="./about">About</Link>
+            <Link className='top-nav-item-link' to="./react_blog/about">About</Link>
           </li>
           <li className='top-nav-item dropdown'>
             <Link className='top-nav-item-link' to="#">More &darr;</Link>
             <ul className="dropdown-option">
               <li className='dropdown-item'>
-                <Link className='dropdown-item-link' to="./test">Test Page</Link>
-                <Link className='dropdown-item-link' to="./no-page">No link here</Link>
+                <Link className='dropdown-item-link' to="./react_blog/test">Test Page</Link>
+                <Link className='dropdown-item-link' to="./react_blog/no-page">No link here</Link>
               </li>
             </ul>
           </li>
