@@ -26,11 +26,11 @@ const App = () => {
             <Routes>
               {/* <Route index element={ <Home /> } /> */}
               <Route path="/" exact element={ <Home /> } />
-              <Route path="/post" element={ <NewPost /> } />
-              <Route path="/post/:id/:postTitle" element={ <PostPage /> } />
-              <Route path="/edit-post/:id" element={ <EditPost /> } />
-              <Route path="/about" element={<About />} />
-              <Route path="/test" element={<Test />} />
+              <Route path="./post" element={ <NewPost /> } />
+              <Route path="./post/:id/:postTitle" element={ <PostPage /> } />
+              <Route path="./edit-post/:id" element={ <EditPost /> } />
+              <Route path="./about" element={<About />} />
+              <Route path="./test" element={<Test />} />
               <Route path="*" element={<MissingPage />} />
             </Routes>
           </DataProvider>
