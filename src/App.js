@@ -24,7 +24,8 @@ const App = () => {
           <DataProvider>
             <Nav />
             <Routes>
-              <Route index element={ <Home /> } />
+              {/* <Route index element={ <Home /> } /> */}
+              <Route path="/react_blog" element={ <Home /> } />
               <Route path="/post" element={ <NewPost /> } />
               <Route path="/post/:id/:postTitle" element={ <PostPage /> } />
               <Route path="/edit-post/:id" element={ <EditPost /> } />
