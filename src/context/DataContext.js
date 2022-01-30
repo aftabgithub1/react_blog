@@ -59,7 +59,7 @@ const DataProvider = ({ children }) => {
       try {
         const postsList = await JSON.parse(localStorage.getItem('postListLS'))
         || postsData;
-        setPosts(postsList.toUpperCase());
+        setPosts(postsList);
       } catch(err) {
         console.log(err.message);
         setFetchError(err.message);
