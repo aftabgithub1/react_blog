@@ -17,7 +17,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/react_blog" element={ <App /> }>
+        <Route path="/react_blog/" element={ <App /> }>
           <Route index element={ <Home /> } />
           <Route path="post" element={ <NewPost /> } />
           <Route path="post/:id/:postTitle" element={ <PostPage /> } />
