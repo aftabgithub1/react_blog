@@ -27,30 +27,6 @@ const DataProvider = ({ children }) => {
       "title": "Post Three",
       "date": "January 14, 2022",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie."
-    },
-    {
-      "id": 4,
-      "title": "Post Four (edited)",
-      "date": "2022-01-30 14:17:38",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a augue dapibus, consequat tortor sed, hendrerit sapien. Morbi aliquet molestie. (Edited)"
-    },
-    {
-      "id": 6,
-      "title": "Data Provider",
-      "date": "2022-01-25 03:13:45",
-      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
-    },
-    {
-      "id": 9,
-      "title": "Another Post from context",
-      "date": "2022-01-25 00:23:40",
-      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
-    },
-    {
-      "id": 16,
-      "title": "Data Provider 5 Ultimate final",
-      "date": "2022-01-25 14:08:31",
-      "body": "he standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
     }
   ];
 
