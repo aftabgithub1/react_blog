@@ -5,7 +5,7 @@ const PostCard = ({ post }) => {
   return (
     <Link
       className="post-card-link"
-      to={`/post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
+      to={`./post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
     >
       <article>
         <div className="post-card">
