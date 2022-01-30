@@ -35,7 +35,7 @@ const EditPost = () => {
       setPosts(listPosts);
       setEditPostTitle('');
       setEditPostBody('');
-      navigate('/');
+      navigate('./');
     } catch(err) {
       console.log(err.message);
     }

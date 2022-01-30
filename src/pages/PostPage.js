@@ -24,7 +24,7 @@ const PostPage = () => {
         let listPosts = posts.filter(post => post.id != id);
         setPosts(listPosts);
         localStorage.setItem('postListLS', JSON.stringify(listPosts));
-        navigate('/');
+        navigate('./');
       } catch(err) {
         console.log(err.message)
       }
