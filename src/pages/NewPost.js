@@ -22,6 +22,7 @@ const NewPost = () => {
       // let response = await api.post('/posts', newPostItem);
       const localStoragePost = JSON.parse(localStorage.getItem('postListLS'));
       let listPosts = [...localStoragePost, newPostItem];
+      localStorage.setItem('postListLS', JSON.stringify(listPosts));
       setPosts(listPosts);
       setPostTitle('');
       setPostBody('');

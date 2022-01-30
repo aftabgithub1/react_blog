@@ -22,8 +22,8 @@ const PostPage = () => {
       try {
         // await api.delete(`/posts/${id}`);
         let listPosts = posts.filter(post => post.id != id);
-        setPosts(listPosts);
         localStorage.setItem('postListLS', JSON.stringify(listPosts));
+        setPosts(listPosts);
         navigate('/react_blog');
       } catch(err) {
         console.log(err.message)
