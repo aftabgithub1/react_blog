@@ -41,7 +41,7 @@ const PostPage = () => {
                 <h1 className="post-title">{ post.title }</h1>
                 <p className="post-date">{ postDateFormat(post.date) }</p>
                 <p className="post-body">{ post.body }</p>
-                <Link to="./edit-post/{post.id}">
+                <Link to={`/react_blog/edit-post/${post.id}`}>
                   <button className="btn-edit">Edit Post</button>
                 </Link>
                 <button
