@@ -4,7 +4,7 @@ const root = "/react_blog";
 
 // auto increment id
 const newId = (items) => {
-  let id = items ? items[items.length - 1].id + 1 : 1;
+  let id = items.length ? items[items.length - 1].id + 1 : 1;
   return id;
 }
 

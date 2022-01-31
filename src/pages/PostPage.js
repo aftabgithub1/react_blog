@@ -55,7 +55,7 @@ const PostPage = () => {
             {!post && 
               <>
                 <p>Opps! the post not found.</p>
-                <Link to="/">Go to home page</Link>
+                <Link to={`${root}`}>Go to home page</Link>
               </>
             }
           </div>

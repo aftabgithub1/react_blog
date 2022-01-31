@@ -11,19 +11,20 @@ const NewPost = () => {
   } = useContext(DataContext);
   
   const nevigate = useNavigate();
+  
 
   // -------------------- hsndle submit ---------------------
-  const handleSubmit = async () => {
-    let id = newId(posts);
-    let date = postDateTime();
-    let newPostItem = { id, title: postTitle, date, body: postBody };
-
+  const handleSubmit = e => {
+    e.preventDefault();
     try {
-      // let response = await api.post('/posts', newPostItem);
-      const localStoragePost = JSON.parse(localStorage.getItem('postListLS')) || posts;
-      let listPosts = [...localStoragePost, newPostItem];
+      let id = newId(posts);
+      let date = postDateTime();
+      let newPost = { id, title: postTitle, date, body: postBody }; 
+      // let response = await api.post('/posts', newPost);
+      let listPosts = [...posts, newPost];
       localStorage.setItem('postListLS', JSON.stringify(listPosts));
       setPosts(listPosts);
+      console.log(listPosts);
       setPostTitle('');
       setPostBody('');
       nevigate(`${root}`);
@@ -37,10 +38,7 @@ const NewPost = () => {
       <div className="container">
         <h1>New Post</h1>
         <form className='new-post-form '
-          onSubmit={e => {
-            handleSubmit();
-            e.preventDefault();
-          }}>
+          onSubmit={ handleSubmit }>
 
           <label htmlFor="newPostTitle">Post Title</label>
           <input
