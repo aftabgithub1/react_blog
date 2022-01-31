@@ -5,7 +5,7 @@ const Test = () => {
     <main>
       <div className="container">
         <h1>Website Deschiption</h1>
-        <p>This is a demo blog website created for the purpose practice. This is alss a fully responsive website. Please, checkout in both desktop and dobile deveices</p>
+        <p>This is a demo blog website which is fully responsive with no page reload. It is also dinamic with crud operation. Please, checkout in both desktop and mobile deveices</p>
       </div>
     </main> 
   );

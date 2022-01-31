@@ -71,7 +71,7 @@ button.btn-delete {
   flex-direction: column;
 }
 header, footer {
-  background-color: aqua;
+  background-color: rgb(0, 214, 214);
 }
 header div {
   display: flex;
@@ -148,7 +148,7 @@ footer {
 }
 .top-nav-items {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-left: auto;
 }
 .top-nav-items, .top-nav-item {
@@ -363,6 +363,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
   }
   .about-bio {
     text-align: left;

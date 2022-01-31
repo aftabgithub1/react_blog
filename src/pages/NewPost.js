@@ -14,8 +14,7 @@ const NewPost = () => {
   
 
   // -------------------- hsndle submit ---------------------
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     try {
       let id = newId(posts);
       let date = postDateTime();
@@ -24,7 +23,6 @@ const NewPost = () => {
       let listPosts = [...posts, newPost];
       localStorage.setItem('postListLS', JSON.stringify(listPosts));
       setPosts(listPosts);
-      console.log(listPosts);
       setPostTitle('');
       setPostBody('');
       nevigate(`${root}`);
@@ -38,7 +36,11 @@ const NewPost = () => {
       <div className="container">
         <h1>New Post</h1>
         <form className='new-post-form '
-          onSubmit={ handleSubmit }>
+          onSubmit={e => {
+            handleSubmit();
+            e.preventDefault();
+          }  
+        }>
 
           <label htmlFor="newPostTitle">Post Title</label>
           <input
