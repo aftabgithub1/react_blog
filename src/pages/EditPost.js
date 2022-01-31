@@ -3,7 +3,8 @@ import { DataContext } from '../context/DataContext';
 
 const EditPost = () => {
   const {
-    api, useEffect, postDateTime,
+    api, useEffect,
+    root, postDateTime,
     posts, setPosts,
     useParams, useNavigate,
     editPostTitle, setEditPostTitle,
@@ -23,7 +24,7 @@ const EditPost = () => {
   
   // -------------------- hsndle edit ---------------------
   const handleEdit = async (id) => {
-    // let date = postDateTime();
+    let date = postDateTime();
     // let newEditPostItem = { id, title: editPostTitle, date, body: editPostBody };
     try {
       // let response = await api.put(`/posts/${id}`, newEditPostItem);

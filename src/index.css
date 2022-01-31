@@ -47,11 +47,10 @@ button {
 }
 
 button:hover {
-  filter: brightness(0.8)
+  opacity: 0.8;
 }
-
 button:active {
-  filter: brightness(1)
+  filter: brightness(0.8)
 }
 button.btn-submit {
   background-color: lightgreen;
@@ -63,10 +62,11 @@ button.btn-edit {
 }
 button.btn-delete {
   background-color: tomato;
-  color: initial;
+  color: white;
 }
 
 .app {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -87,18 +87,37 @@ header .admin-name {
   font-weight: 600;
   color: blueviolet;
 }
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto;
+}
 footer {
   font-size: initial;
   text-align: center;
   padding: 0.5em 0;
 }
 
+/* ------------ scrollbar ------------ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+/* -------------- utility classes ---------------- */
+
 .container {
   max-width: 800px;
+  height: inherit;
   margin: auto;
 }
 
-/* -------------- utility classes ---------------- */
 
 @media screen and (min-width: 640px) {
   .grid {
@@ -213,10 +232,6 @@ footer {
   padding: 5px;
 }
 
-main {
-  min-height: 100vh;
-  padding: 20px;
-}
 
 /* -------------- post ---------------- */
 .post-title, .post-date, .post-body {
@@ -307,3 +322,29 @@ main {
   }
 }
 
+/* -------------- about page ---------------- */
+
+.about-bio {
+  text-align: center;
+  margin-top: 20px;
+}
+.about-photo {
+  max-width: 250px;
+  aspect-ratio: 1;
+  display: block;
+  margin: auto;
+  border: 3px solid aqua;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 640px) {
+  .about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .about-bio {
+    text-align: left;
+    margin-top: 0;
+  }
+}

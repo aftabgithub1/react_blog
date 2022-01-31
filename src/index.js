@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { root } from './functions/myGlobalFunctions';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // pages
@@ -17,7 +18,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={ <App /> }>
+        <Route path={`${root}`} element={ <App /> }>
           <Route index element={ <Home /> } />
           <Route path="post" element={ <NewPost /> } />
           <Route path="post/:id/:postTitle" element={ <PostPage /> } />

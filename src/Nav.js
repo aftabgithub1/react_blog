@@ -33,7 +33,7 @@ const Nav = () => {
             <Link className='top-nav-item-link' to="#">More &darr;</Link>
             <ul className="dropdown-option">
               <li className='dropdown-item'>
-                <Link className='dropdown-item-link' to="./test">Test Page</Link>
+                <Link className='dropdown-item-link' to="./test">Website Description</Link>
                 <Link className='dropdown-item-link' to="./no-page">No link here</Link>
               </li>
             </ul>

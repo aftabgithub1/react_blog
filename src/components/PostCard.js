@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
           <div className="body">
             <div className="date">{ postDateFormat(post.date) }</div>
             <p className="text">
-              { post.body.length > 100 
+              { post.body.length < 100 
                 ? post.body 
                 : `${post.body.substr(0, 100)}...` }
             </p>

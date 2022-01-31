@@ -4,7 +4,7 @@ import PostSideBar from "../PostSideBar";
 
 const PostPage = () => {
   const { 
-    api, postDateFormat,
+    api, root, postDateFormat,
     posts, setPosts,
     Link, useParams, useNavigate
   } = useContext(DataContext);

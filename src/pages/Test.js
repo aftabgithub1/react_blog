@@ -1,21 +1,14 @@
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const Test = () => {
-  const [items, setItems] = useLocalStorage("fruits", []);
-
-  // setItems([...items, "Mango"])
-  
-
-
-  // var data = "";
-  // if(!data) {
-  //   const myArray = ['Ayaana', 'Adiyat', 'Mehmed', 'Afra', 'Iqra']
-  //   localStorage.setItem('myNieces', JSON.stringify(myArray));
-  // }
-
-  // var data = JSON.parse(localStorage.getItem('myNieces'));
-
-  return ( <main></main> );
+  return ( 
+    <main>
+      <div className="container">
+        <h1>Website Deschiption</h1>
+        <p>This is a demo blog website created for the purpose practice. This is alss a fully responsive website. Please, checkout in both desktop and dobile deveices</p>
+      </div>
+    </main> 
+  );
 }
 
 export default Test;

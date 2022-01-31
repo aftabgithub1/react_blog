@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { root } from "../functions/myGlobalFunctions"
 
 const MissingPage = () => {
   return (
@@ -7,7 +8,7 @@ const MissingPage = () => {
         <h1
           style={{color: '#555', textShadow: '1px 1px 4px #ccc'}}
         >404 not found</h1>
-        <Link to="/">Go back to home page</Link>
+        <Link to={`${root}`} style={{textDecoration: 'none'}}>Go back to home page</Link>
       </div>
     </main>
   )

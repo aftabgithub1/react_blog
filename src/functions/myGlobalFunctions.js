@@ -1,6 +1,6 @@
 import { format } from "date-fns"; // to install the package, type 'npm i date-fnd -S' in the project folder terminal
 // root folder
-const root = "https://aftabgithub1.github.io/react_blog";
+const root = "/react_blog";
 
 // auto increment id
 const newId = (items) => {

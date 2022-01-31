@@ -4,7 +4,7 @@ import { DataContext } from '../context/DataContext';
 const NewPost = () => {
   const { 
     api, useNavigate,
-    newId, postDateTime,
+    root, newId, postDateTime,
     posts, setPosts,
     postTitle, setPostTitle,
     postBody, setPostBody
@@ -20,7 +20,7 @@ const NewPost = () => {
 
     try {
       // let response = await api.post('/posts', newPostItem);
-      const localStoragePost = JSON.parse(localStorage.getItem('postListLS'));
+      const localStoragePost = JSON.parse(localStorage.getItem('postListLS')) || posts;
       let listPosts = [...localStoragePost, newPostItem];
       localStorage.setItem('postListLS', JSON.stringify(listPosts));
       setPosts(listPosts);

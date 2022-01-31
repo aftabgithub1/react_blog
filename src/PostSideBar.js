@@ -1,8 +1,10 @@
-import { postDateFormat } from './functions/myGlobalFunctions';
+import { root, postDateFormat } from './functions/myGlobalFunctions';
 import { Link } from 'react-router-dom';
 
 const PostSideBar = ({ posts }) => {
-  const recentPosts = posts.slice((posts.length - 5), posts.length)
+  const recentPosts = posts.length > 5 
+    ? posts.slice((posts.length - 5), posts.length) 
+    : posts;
   return (
     <>
       <div className='sidebar'>
