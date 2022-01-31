@@ -35,7 +35,7 @@ const EditPost = () => {
       setPosts(listPosts);
       setEditPostTitle('');
       setEditPostBody('');
-      navigate('/react_blog');
+      navigate(`${root}`);
     } catch(err) {
       console.log(err.message);
     }

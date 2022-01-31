@@ -26,7 +26,7 @@ const NewPost = () => {
       setPosts(listPosts);
       setPostTitle('');
       setPostBody('');
-      nevigate('/react_blog');
+      nevigate(`${root}`);
     } catch(err) {
       console.log(err.message)
     }

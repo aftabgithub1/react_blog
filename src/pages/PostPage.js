@@ -24,7 +24,7 @@ const PostPage = () => {
         let listPosts = posts.filter(post => post.id != id);
         localStorage.setItem('postListLS', JSON.stringify(listPosts));
         setPosts(listPosts);
-        navigate('/react_blog');
+        navigate(`${root}`);
       } catch(err) {
         console.log(err.message)
       }
@@ -41,7 +41,7 @@ const PostPage = () => {
                 <h1 className="post-title">{ post.title }</h1>
                 <p className="post-date">{ postDateFormat(post.date) }</p>
                 <p className="post-body">{ post.body }</p>
-                <Link to={`/react_blog/edit-post/${post.id}`}>
+                <Link to={`${root}/edit-post/${post.id}`}>
                   <button className="btn-edit">Edit Post</button>
                 </Link>
                 <button

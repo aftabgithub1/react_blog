@@ -11,7 +11,7 @@ const PostSideBar = ({ posts }) => {
           {posts.map(post => post.id == 1 && (
             <li key={post.id} className='sidebar-list-item'>
               <Link
-                to={`/post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
+                to={`${root}/post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
                 className='sidebar-list-link'>
                 { post.title }
               </Link>
@@ -26,7 +26,7 @@ const PostSideBar = ({ posts }) => {
           {recentPosts.map(post => (
             <li key={post.id} className='sidebar-list-item'>
               <Link
-                to={`/post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
+                to={`${root}/post/${post.id}/${(post.title.replace(/ /g, '-'))}`}
                 className='sidebar-list-link'>
                 { post.title }
               </Link>
